@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <camelContext xmlns="http://camel.apache.org/schema/spring">
+        <route>
+            <from uri="file:///Users/albertorobles/IdeaProjects/camel101/src/main/resources/IN?delete=false" />
+            <log message="MQ IN"/>
+            <to uri="activemq:camel"/>
+            <log message="MQ OUT"/>
+            <to uri="file:///Users/albertorobles/IdeaProjects/camel101/src/main/resources/OUT" />
+        </route>
+    </camelContext>
+</beans>

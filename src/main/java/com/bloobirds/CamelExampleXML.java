@@ -12,8 +12,9 @@ public class CamelExampleXML {
 
         // Loading a route automatically executes it
         ClassPathXmlApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext("routes/files.xml");
-         //       new ClassPathXmlApplicationContext("routes/basic.xml");
+                new ClassPathXmlApplicationContext("routes/activemq.xml");
+        //      new ClassPathXmlApplicationContext("routes/files.xml");
+         //     new ClassPathXmlApplicationContext("routes/basic.xml");
 
         // so run for 10 seconds
         Thread.sleep(10000);
