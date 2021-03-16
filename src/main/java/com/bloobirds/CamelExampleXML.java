@@ -16,8 +16,8 @@ public class CamelExampleXML {
         //      new ClassPathXmlApplicationContext("routes/files.xml");
          //     new ClassPathXmlApplicationContext("routes/basic.xml");
 
-        // so run for 10 seconds
-        Thread.sleep(10000);
+        // so run for 100 seconds
+        Thread.sleep(100000);
 
         // and then stop nicely
         applicationContext.close();
