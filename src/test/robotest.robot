@@ -22,6 +22,7 @@ New File Test Case
     queue wait process content  5
     check result "${BASEPATH}/OUT"
 
+
 *** Keywords ***
 
 new file with text "${texto}"

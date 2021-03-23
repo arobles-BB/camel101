@@ -6,9 +6,7 @@
 
     <camelContext xmlns="http://camel.apache.org/schema/spring">
         <route>
-            <from uri="file:///Users/albertorobles/IdeaProjects/camel101/src/main/resources/IN?delete=false" />
-            <log loggingLevel="INFO"  message="MQ IN"/>
-            <to uri="activemq:camel"/>
+            <from uri="activemq:camel"/>
             <log loggingLevel="INFO" message="MQ OUT"/>
             <to uri="file:///Users/albertorobles/IdeaProjects/camel101/src/main/resources/OUT" />
         </route>

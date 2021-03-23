@@ -1,4 +1,4 @@
-package com.bloobirds;
+package com.bloobirds.camel;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.apache.logging.log4j.LogManager;
@@ -12,15 +12,15 @@ public class CamelExampleXML {
 
         // Loading a route automatically executes it
         ClassPathXmlApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext("routes/activemq.xml");
+        //        new ClassPathXmlApplicationContext("routes/activemq-consumer.xml");
+              new ClassPathXmlApplicationContext("routes/activemq.xml");
         //      new ClassPathXmlApplicationContext("routes/files.xml");
-         //     new ClassPathXmlApplicationContext("routes/basic.xml");
+        //      new ClassPathXmlApplicationContext("routes/basic.xml");
 
-        // so run for 100 seconds
-        Thread.sleep(100000);
-
-        // and then stop nicely
-        applicationContext.close();
+        log.info("press Ctrl+c to shutdown...");
+        while (true) {
+            Thread.sleep(1000);
+        }
     }
 
 }

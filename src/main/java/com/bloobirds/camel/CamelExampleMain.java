@@ -1,4 +1,4 @@
-package com.bloobirds;
+package com.bloobirds.camel;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
